@@ -2,14 +2,11 @@ from django.shortcuts import render, get_object_or_404
 from .models import Hobby, PortfolioItem
 
 def home(request):
-<<<<<<< HEAD
-    return render(request, 'PortfolioDatabase/home.html')
-=======
+    # Include context for additional customization
     return render(request, 'PortfolioDatabase/home.html', {
         'welcome_message': "Welcome to my portfolio!",
         'summary': "Hi, I'm a computer science student talking about my work and hobbies."
     })
->>>>>>> 4642c4fef93328722aa6505dabfbd42aacf9ab57
 
 def hobbies(request):
     hobbies_list = Hobby.objects.all()
@@ -28,10 +25,8 @@ def portfolio_detail(request, portfolio_id):
     return render(request, 'PortfolioDatabase/portfolio_detail.html', {'portfolio_item': portfolio_item})
 
 def contact(request):
-<<<<<<< HEAD
-    return render(request, 'PortfolioDatabase/contact.html')
-=======
+    # Include context for additional customization
     return render(request, 'PortfolioDatabase/contact.html', {
         'email': "esmaeilmousavi@weber.edu"
     })
->>>>>>> 4642c4fef93328722aa6505dabfbd42aacf9ab57
+
